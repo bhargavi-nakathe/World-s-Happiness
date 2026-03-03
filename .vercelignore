@@ -1,8 +1,0 @@
-__pycache__/
-*.pyc
-.DS_Store
-.git
-.github
-README.md
-*.csv
-*.xlsx
