@@ -46,7 +46,7 @@ features = ['Economy (GDP per Capita)','Health (Life Expectancy)',
 # Sidebar Navigation
 # ---------------------------
 st.sidebar.title("Navigation")
-menu = st.sidebar.radio("Go to", ["Dashboard", "Top 10 Happiest Countries",
+menu = st.sidebar.radio("Go to", ["Dashboard", "Top 10 Happiest Countries","Country Comparison",
                                    "Feature Importance", "Prediction"])
 
 # ---------------------------
@@ -117,6 +117,53 @@ elif menu == "Feature Importance":
     pd.Series(importance, index=features).sort_values().plot(kind="barh", ax=ax)
     ax.set_title("Feature Importance (Random Forest)")
     st.pyplot(fig)
+
+# ---------------------------
+# Country Comparison
+# ---------------------------
+elif menu == "Country Comparison":
+    st.subheader("🌍 Compare Happiness Between Two Countries")
+
+    import pandas as pd
+    import plotly.express as px
+
+    df = pd.read_csv("data/world_happiness.csv")
+
+    # Country selectors
+    country1 = st.selectbox("Select First Country", df["Country"])
+    country2 = st.selectbox(
+    "Select Second Country",
+    df[df["Country"] != country1]["Country"]
+)
+
+    score1 = df[df["Country"] == country1]["Happiness Score"].values[0]
+    score2 = df[df["Country"] == country2]["Happiness Score"].values[0]
+
+    st.subheader("Happiness Score Comparison")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric(label=country1, value=round(score1, 2))
+
+    with col2:
+        st.metric(label=country2, value=round(score2, 2))
+
+    # Bar chart comparison
+    comparison = pd.DataFrame({
+        "Country": [country1, country2],
+        "Happiness Score": [score1, score2]
+    })
+
+    fig = px.bar(
+        comparison,
+        x="Country",
+        y="Happiness Score",
+        color="Country",
+        title="Happiness Score Comparison"
+    )
+
+    st.plotly_chart(fig)
 
 # ---------------------------
 # Prediction Section
