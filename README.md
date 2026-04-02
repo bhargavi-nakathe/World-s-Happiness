@@ -12,8 +12,8 @@ The project also includes an interactive Streamlit dashboard for exploring globa
 ### Dashboard
 ![Dashboard](images/dashboard.png)
 
-### Global Happiness Map
-![Map](images/world_map.png)
+### Feature Importance
+![Map](images/feature_imp.png)
 
 ### Country Comparison
 ![Comparison](images/comparison.png)
