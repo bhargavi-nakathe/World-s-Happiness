@@ -1,20 +1,41 @@
 # 🌍 World’s Happiness Prediction Project
 
-This project analyzes and predicts global happiness scores using data from the World Happiness Report. It applies data analysis, visualization, and machine learning models to understand the factors influencing happiness across countries.
+This project analyzes the World Happiness dataset and builds machine learning models to predict the happiness score of countries based on socio-economic indicators.
+
+The project also includes an interactive Streamlit dashboard for exploring global happiness data, comparing countries, and predicting happiness scores.
+---
+##  Working link:
+**https://world-s-happiness-kzbfbqosd5ec7fwukk2g9d.streamlit.app/**
+
+## 📸 App Screenshots
+
+### Dashboard
+![Dashboard](images/dashboard.png)
+
+### Feature Importance
+![Map](images/feature_imp.png)
+
+### Country Comparison
+![Comparison](images/comparison.png)
 
 ---
 
-## 📌 Project Overview
+📊 Interactive Dashboard
 
-The goal of this project is to explore the factors that contribute to happiness levels around the world and build machine learning models to predict happiness scores based on those factors.
+• Global Happiness Map  
+• Top 10 Happiest Countries Visualization  
+• Feature Importance Analysis  
 
-The project includes:
-- Data preprocessing and cleaning
-- Exploratory Data Analysis (EDA)
-- Data visualization
-- Machine learning model training
-- Model evaluation
-- A simple Streamlit UI for predictions
+🤖 Machine Learning Prediction
+
+• Predict happiness score using Linear Regression model  
+• User-controlled sliders for socio-economic indicators  
+
+🌍 Country Comparison
+
+• Compare happiness scores of two countries  
+• Interactive visual comparison  
+
 
 ---
 
@@ -39,21 +60,18 @@ World-s-Happiness/
 
 ## 📊 Dataset
 
-The dataset is based on the **World Happiness Report**, which ranks countries based on happiness levels.
+Dataset: World Happiness Report from kaggle
 
-Typical features used in the dataset include:
-
-- GDP per capita
-- Social support
-- Healthy life expectancy
-- Freedom to make life choices
-- Generosity
-- Perceptions of corruption
-
-These features are used to predict the **Happiness Score**.
+Features used:
+• Economy (GDP per Capita)
+• Health (Life Expectancy)
+• Freedom
+• Trust (Government Corruption)
+• Generosity
+• Family
+• Dystopia Residual
 
 ---
-
 ## ⚙️ Technologies Used
 
 - Python
@@ -145,9 +163,6 @@ If you'd like to improve the project:
 4. Open a pull request
 
 ---
-
-##  Working link:
-**https://world-s-happiness-kzbfbqosd5ec7fwukk2g9d.streamlit.app/**
 
 ## 👩‍💻 Author
 
