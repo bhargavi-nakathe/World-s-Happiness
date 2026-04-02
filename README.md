@@ -10,13 +10,13 @@ The project also includes an interactive Streamlit dashboard for exploring globa
 ## 📸 App Screenshots
 
 ### Dashboard
-![Dashboard](images/dashboard.png)
+![Dashboard](image/dashboard.png)
 
 ### Feature Importance
-![Map](images/feature_imp.png)
+![Map](image/feature_imp.png)
 
 ### Country Comparison
-![Comparison](images/comparison.png)
+![Comparison](image/comparison.png)
 
 ---
 
